@@ -6,7 +6,7 @@ This project is a minimalist version of the Cube3D assignment (inspired by Wolfe
 
 ![nice gif](gifcube.gif)
 
-## Compilation and usage
+## Compilation and Execution
 
 Compile using gcc or clang :
 
@@ -14,7 +14,7 @@ Compile using gcc or clang :
 gcc -o cubeascii cubeascii.c -lm
 ```
 
-Then, run it in a **POSIX terminal** (so not windows, besides wsl):
+Then, run it in a **POSIX terminal**:
 
 ```bash
 ./cubeascii
@@ -22,7 +22,7 @@ Then, run it in a **POSIX terminal** (so not windows, besides wsl):
 Your terminal should support 256-color mode. If it doesn't, the terminal will fallback on ANSI-color (ugly).
 Tested with gnome-terminal on Ubuntu 22.04, Konsole and foot on openSUSE. 
 
-WSL with the default Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside wsl fixes it.
+WSL with the default non-posix Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside wsl fixes it.
 
 You can adjust the screen resolution by editing the following macros in `cubeascii.c`:
 ```c
@@ -30,15 +30,15 @@ You can adjust the screen resolution by editing the following macros in `cubeasc
 #define SCREEN_HEIGHT 105
 ```
 
-You will need to **unzoom** your terminal if you want to support higher resolution. These values are for unzoomed Konsole.
+You will need to **unzoom** your terminal if you want to support higher resolution. These values are for unzoomed KDE Konsole.
 
 ## How does raycasting work?
 
 Rendering is done one vertical column at a time, from left to right, wich are then printed row by row in the second loop in the render() function.
 
-read the comments in the C file, i'll update this one day
+read the extensive comments in the C file, i'll update this one day.
 
-coucou oui
+maybe.
 
 ## Ressources
 
