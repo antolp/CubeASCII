@@ -1,6 +1,6 @@
 # CubeASCII
 
-A tiny raycaster, written as a single small file of C, that renders ASCII graphics in your terminal.
+A tiny raycaster, written as a single small file of C, that renders ASCII graphics in a POSIX terminal.
 
 This project is a minimalist version of the Cube3D assignment (inspired by Wolfenstein 3D), where rendering is done using terminal characters instead of a graphical window.
 
@@ -22,7 +22,7 @@ Then, run the binary in a **POSIX terminal**:
 Your terminal should support 256-color mode. If it doesn't, the terminal will fallback on ANSI-color (ugly).
 Tested with gnome-terminal on Ubuntu 22.04 and WSL, Konsole and foot on OpenSUSE. 
 
-WSL with the default non-posix Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside WSL should fix it.
+WSL with the default non-posix Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside WSL should fixes it.
 
 You can adjust the screen resolution by editing the following macros in `cubeascii.c`:
 ```c
@@ -30,7 +30,7 @@ You can adjust the screen resolution by editing the following macros in `cubeasc
 #define SCREEN_HEIGHT 105
 ```
 
-You will need to **unzoom** your terminal if you want to support higher resolution. These values are for unzoomed KDE Konsole.
+You will need to unzoom your terminal if you want to support higher resolution. These values are for unzoomed KDE Konsole.
 
 ## How does raycasting work?
 
