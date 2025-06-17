@@ -14,15 +14,15 @@ Compile using gcc or clang :
 gcc -o cubeascii cubeascii.c -lm
 ```
 
-Then, run it in a **POSIX terminal**:
+Then, run the binary in a **POSIX terminal**:
 
 ```bash
 ./cubeascii
 ```
 Your terminal should support 256-color mode. If it doesn't, the terminal will fallback on ANSI-color (ugly).
-Tested with gnome-terminal on Ubuntu 22.04, Konsole and foot on openSUSE. 
+Tested with gnome-terminal on Ubuntu 22.04 and WSL, Konsole and foot on OpenSUSE. 
 
-WSL with the default non-posix Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside wsl fixes it.
+WSL with the default non-posix Windows 11 terminal will causes some ugly flickering due to (i assume) the way it handles screen clearing, using gnome-terminal or any posix terminal inside WSL should fix it.
 
 You can adjust the screen resolution by editing the following macros in `cubeascii.c`:
 ```c
